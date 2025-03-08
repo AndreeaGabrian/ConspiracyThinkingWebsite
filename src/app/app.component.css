@@ -1,0 +1,143 @@
+.hero {
+  position: relative;
+  width: 100%;
+  height: 120vh;
+  /*overflow: hidden;*/
+}
+
+
+.video1 {
+  position: relative;
+  width: 90%; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+  max-width: 1000px; /* Set a max width */
+  border: 8px solid #2d2d2d; /* Frame effect */
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.5); /* Soft glow effect */
+  display: block;
+  margin: 50px auto; /* Centering */
+}
+
+.overlay {
+  position: absolute;
+  display: inline-grid;
+  bottom: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+button {
+  font-family: 'Courier New', monospace;
+  padding: 12px 24px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  background: whitesmoke;
+  color: black;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 0px 10px rgba(253, 246, 210, 0.8);
+  display: flex;
+  flex-direction: column; /* Stack text & arrow vertically */
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+button:hover {
+  background: #d9ecf8;
+  color: black;
+  transform: scale(1.1);
+  box-shadow: 0px 0px 15px rgb(217, 236, 248);
+}
+
+.fade-in-arrow {
+  display: flex;
+  flex-direction: column; /* Stack text & arrow vertically */
+  align-items: center;
+  justify-content: center;
+  color: whitesmoke;
+  font-size: 65px;
+  opacity: 0;
+  animation: fadeIn 2s ease-in-out 4s forwards, bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+}
+
+
+#next-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: #111; /* Dark background for contrast */
+}
+
+#next-section2 {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f4f4f4;
+}
+
+.main-container{
+  background-color: black;
+}
+
+.typing-text::after {
+  content: "Are consiracy theories real?";
+  color:white;
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3s steps(25, end), blink 0.8s infinite;
+  border-right: 3px solid white; /* Blinking cursor effect */
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+.above-scroll-text{
+  display: flex;
+  justify-content: center;
+}
+
+.fade-in-text{
+  color: white;
+}
+/* Fade-in effect for the subtitle */
+.fade-in-text, .fade-in-button{
+  opacity: 0;
+  animation: fadeIn 2s ease-in-out 4s forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
