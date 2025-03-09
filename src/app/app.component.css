@@ -95,7 +95,7 @@ button:hover {
 }
 
 .typing-text::after {
-  content: "Are consiracy theories real?";
+  content: "Are conspiracy theories real?";
   color:white;
   display: inline-block;
   overflow: hidden;
