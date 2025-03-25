@@ -492,8 +492,8 @@ button:hover {
   padding: 20px;
   border-radius: 15px;
   box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.2);
-  width: 45%;
-  min-width: 280px;
+  width: 55%;
+  min-width: 380px;
   text-align: left;
   transition: transform 0.3s;
 }
@@ -637,5 +637,34 @@ button:hover {
   width: 100%;
   max-width: 300px;
 }
+
+
+.response-buttons.multiple-choice {
+  display: flex;
+  flex-direction: column;  /* ← stacks buttons vertically */
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+  align-items: stretch;
+  text-align: left;
+}
+
+.response-buttons.multiple-choice button {
+  background-color: #f3f3f3;
+  color: #111;
+  border: none;
+  border-radius: 12px;
+  padding: 0.8rem 1.2rem;
+  font-family: 'Courier New', monospace;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  text-align: left;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.response-buttons.multiple-choice button:hover {
+  background-color: #e6e6e6;
+}
+
 
 

@@ -29,3 +29,70 @@
   width: 100%;
   max-width: 300px;
 }
+
+.tiktok-wrapper {
+  margin: 1rem 0;
+  text-align: center;
+}
+
+.tiktok-preview {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+  object-fit: cover;
+}
+
+.load-tiktok-btn {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: 'Courier New', monospace;
+  font-size: 1rem;
+  transition: background 0.2s ease;
+}
+
+.load-tiktok-btn:hover {
+  background-color: #333;
+}
+.tiktok-error {
+  background-color: #fff3cd;
+  border-left: 4px solid #ffcc00;
+  padding: 1rem;
+  margin-top: 1rem;
+  color: #333;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+.media-card {
+  display: block;
+  text-decoration: none;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.media-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.link-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+.link-label {
+  background-color: #fff;
+  color: #111;
+  font-family: 'Courier New', monospace;
+  font-size: 0.95rem;
+  padding: 0.75rem 1rem;
+  text-align: center;
+}

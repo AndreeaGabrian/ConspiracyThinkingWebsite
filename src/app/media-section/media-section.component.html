@@ -1,8 +1,15 @@
 <div class="media-section" *ngIf="sources && sources.length">
-  <strong>Sources:</strong>
+  <strong>{{label}}:</strong>
   <div class="media-grid">
     <ng-container *ngFor="let media of sources">
-      <a *ngIf="media.type === 'link'" [href]="media.src" target="_blank">{{ media.label }}</a>
+      <a *ngIf="media.type === 'link'" [href]="media.src" target="_blank" class="media-card link-card">
+        <img src="src/assets/images/icon_NEWS.png" alt="Link preview" />
+        <div class="link-label">{{ media.label }}</div>
+      </a>
+
+      <p *ngIf="media.type === 'text'" class="context-text">
+        {{ media.content }}
+      </p>
 
       <img *ngIf="media.type === 'image'" [src]="media.src" [alt]="media.alt || 'image'" />
 
@@ -13,13 +20,30 @@
 
       <iframe *ngIf="media.type === 'youtube'" [src]="sanitizeUrl(media.src)" frameborder="0" allowfullscreen></iframe>
 
-      <blockquote *ngIf="media.type === 'tiktok'"
-                  class="tiktok-embed"
-                  [attr.cite]="media.src"
-                  [attr.data-video-id]="media.id"
-                  style="max-width: 325px; min-width: 325px;">
-        <section>Loading TikTok...</section>
-      </blockquote>
+      <div *ngIf="media.type === 'tiktok'" class="tiktok-wrapper">
+
+        <!-- Show preview + Load button if not yet clicked -->
+        <ng-container *ngIf="!loadedTikToks[media.id]">
+          <img *ngIf="media.placeholder" [src]="media.placeholder" class="tiktok-preview" alt="TikTok preview" />
+          <button class="load-tiktok-btn" (click)="loadTikTok(media.id)">▶ Load TikTok</button>
+        </ng-container>
+
+        <!-- If loaded and working, show the embed -->
+        <blockquote *ngIf="loadedTikToks[media.id] && !failedTikToks[media.id]"
+                    class="tiktok-embed"
+                    [attr.cite]="media.src"
+                    [attr.data-video-id]="media.id"
+                    style="max-width: 605px; min-width: 325px;">
+          <section>Loading TikTok...</section>
+        </blockquote>
+
+        <!-- If failed to load -->
+        <div *ngIf="failedTikToks[media.id]" class="tiktok-error">
+          <p>⚠️ Sorry, this TikTok couldn't be loaded. You can <a [href]="media.src" target="_blank">view it directly on TikTok</a>.</p>
+        </div>
+      </div>
+
+
 
     </ng-container>
   </div>
