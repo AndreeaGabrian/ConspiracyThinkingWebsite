@@ -247,8 +247,8 @@
   <section class="section-questions" id="questions-section">
     <h2 class="section-title">QAnon: Think Critically</h2>
     <p class="question-intro">
-      Below are common QAnon claims. Read the sources, analyze the evidence, and ask yourself:
-      <em>How do we determine what is true?</em>
+      Below are common QAnon claims. Read and watch the sources, analyze the evidence, and ask yourself:
+      <em>How do we determine what is true? What makes you believe a source?</em>
     </p>
 
     <div class="questions-container">
@@ -269,18 +269,15 @@
 
         <button class="toggle-btn" (click)="toggleAnswer('answer1')">{{sourceButtonText}}</button>
         <div *ngIf="answersVisibility['answer1']" class="answer-content">
-          <p><strong>Fact-check:</strong> No credible evidence supports this claim.</p>
-          <p><strong>Sources:</strong>
-            <a href="https://www.theguardian.com/commentisfree/2020/sep/20/qanon-conspiracy-child-abuse-truth-trump" target="_blank">The Guardian news</a> |
-            <a href="https://www.france24.com/en/20201009-qanon-sows-panic-with-child-trafficking-misinformation" target="_blank">France24 news</a>
-          </p>
+          <p><strong>Fact-check:</strong> Do credible evidence supports this claim?</p>
+          <app-media-section [sources]="mediaSources['answer1']"></app-media-section>
         </div>
       </div>
 
       <!-- Question 2 -->
       <div class="question-box">
         <h3>2. Has Q correctly predicted many world events?</h3>
-        <p><strong>Claim:</strong> Q's accurate predictions prove QAnon is real.</p>
+        <p><strong>Claim:</strong> Q's accurate predictions prove QAnon is real. Is it the case?</p>
         <div class="response-buttons">
           <button class="true-btn" (click)="checkAnswer('answer2', true)">True</button>
           <button class="false-btn" (click)="checkAnswer('answer2', false)">False</button>
@@ -294,11 +291,8 @@
 
         <button class="toggle-btn" (click)="toggleAnswer('answer2')">{{sourceButtonText}}</button>
         <div *ngIf="answersVisibility['answer2']" class="answer-content">
-          <p><strong>Fact-check:</strong> Q’s vague predictions often fail, but believers reinterpret them.</p>
-          <p><strong>Sources:</strong>
-            <a href="https://www.theguardian.com/us-news/2021/jan/20/qanon-biden-inauguration-trump-antisemitism-white-nationalism" target="_blank">The Guardian article</a> |
-            <a href="https://gnet-research.org/2021/03/31/how-qanon-reacts-to-failed-predictions/" target="_blank">Gnet article</a>
-          </p>
+          <p><strong>Fact-check:</strong> Q’s vague predictions often fail, but believers reinterpret them. What do you think?</p>
+          <app-media-section [sources]="mediaSources['answer2']"></app-media-section>
         </div>
       </div>
 
@@ -320,10 +314,7 @@
         <button class="toggle-btn" (click)="toggleAnswer('answer3')">{{sourceButtonText}}</button>
         <div *ngIf="answersVisibility['answer3']" class="answer-content">
           <p><strong>Logical Fallacy:</strong> This is an example of an "Us vs. Them" mentality.</p>
-          <p><strong>Sources:</strong>
-            <a href="https://www.npr.org/2020/09/17/913398383/qanon-how-the-conspiracy-theory-attracted-followers-and-took-over-the-internethttps://www.nbcnews.com/think/opinion/psychology-qanon-why-do-seemingly-sane-people-believe-bizarre-conspiracy-ncna900171" target="_blank">NBC news</a> |
-            <a href="https://time.com/5929843/madeleine-albright-us-vs-them-thinking/" target="_blank">Time Magazine article</a>
-          </p>
+          <app-media-section [sources]="mediaSources['answer3']"></app-media-section>
         </div>
       </div>
 

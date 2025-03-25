@@ -1,0 +1,27 @@
+<div class="media-section" *ngIf="sources && sources.length">
+  <strong>Sources:</strong>
+  <div class="media-grid">
+    <ng-container *ngFor="let media of sources">
+      <a *ngIf="media.type === 'link'" [href]="media.src" target="_blank">{{ media.label }}</a>
+
+      <img *ngIf="media.type === 'image'" [src]="media.src" [alt]="media.alt || 'image'" />
+
+      <video *ngIf="media.type === 'video'" controls>
+        <source [src]="media.src" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+
+      <iframe *ngIf="media.type === 'youtube'" [src]="sanitizeUrl(media.src)" frameborder="0" allowfullscreen></iframe>
+
+      <blockquote *ngIf="media.type === 'tiktok'"
+                  class="tiktok-embed"
+                  [attr.cite]="media.src"
+                  [attr.data-video-id]="media.id"
+                  style="max-width: 325px; min-width: 325px;">
+        <section>Loading TikTok...</section>
+      </blockquote>
+
+    </ng-container>
+  </div>
+</div>
+

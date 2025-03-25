@@ -1,10 +1,11 @@
 import {Component, ElementRef, ViewChild} from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import {MediaSectionComponent} from './media-section/media-section.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, CommonModule],
+  imports: [RouterOutlet, CommonModule, MediaSectionComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -15,12 +16,36 @@ export class AppComponent {
   feedbackMessages: { [key: string]: string } = {};
   sourceButtonText: string = "Check the sources";
 
-  // Define correct answers with an explicit type
+
   correctAnswers: { [key: string]: boolean } = {
-    answer1: false, // False: No evidence supports this claim.
-    answer2: false, // False: Q's predictions are vague or false.
-    answer3: false  // False: "Us vs. Them" thinking is a logical fallacy.
+    answer1: false,
+    answer2: false,
+    answer3: false
   };
+
+  mediaSources = {
+    answer1: [
+      { type: 'link', src: 'https://www.theguardian.com/commentisfree/2020/sep/20/qanon-conspiracy-child-abuse-truth-trump', label: 'article from The Guardian' },
+      { type: 'link', src: 'https://www.france24.com/en/20201009-qanon-sows-panic-with-child-trafficking-misinformation', label: 'article from France24' },
+      { type: 'image', src: 'src/assets/images/question1/q1-2.jpg', alt: 'image' },
+      { type: 'image', src: 'src/assets/images/question1/q1-3.jpg', alt: 'image' },
+      { type: 'video', src: 'src/assets/videos/question1/q1-1.mp4' }
+
+    ],
+    answer2: [
+      {type: 'link', src: 'https://www.theguardian.com/us-news/2021/jan/20/qanon-biden-inauguration-trump-antisemitism-white-nationalism', label: 'article from The Guardian'},
+      {type: 'link', src: 'https://gnet-research.org/2021/03/31/how-qanon-reacts-to-failed-predictions', label: 'article from Gnet'},
+      { type: 'youtube', src:"https://www.youtube.com/embed/c6J8OHsQKWQ?si=pXSlP--529BCH56o", label:  "video"},
+      { type: 'youtube', src: "https://www.youtube.com/embed/vthtgl1faY0?si=teg9AROrWpX7Sj8M", label: "video" }
+    ],
+    answer3: [
+      {type: 'link', src: "https://www.nbcnews.com/think/opinion/psychology-qanon-why-do-seemingly-sane-people-believe-bizarre-conspiracy-ncna900171", label: 'article from NBC News'},
+      {type: 'link', src: "https://time.com/5929843/madeleine-albright-us-vs-them-thinking", label: 'article from Time'},
+      { type: 'youtube', src:"https://www.youtube.com/embed/Ukc4MejaGl8?si=WpIVQH0IOoTGriDI", label:  "video"},
+      { type: 'tiktok', src: "https://www.tiktok.com/@matrix_hacked11/video/7173390832140094762", id: "7173390832140094762" }
+    ]
+  };
+
 
   toggleAnswer(questionId: string) {
     this.answersVisibility[questionId] = !this.answersVisibility[questionId];
