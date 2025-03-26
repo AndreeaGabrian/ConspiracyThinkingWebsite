@@ -7,7 +7,7 @@ import {MediaSectionComponent} from './media-section/media-section.component';
   selector: 'app-root',
   imports: [RouterOutlet, CommonModule, MediaSectionComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './new.css'
 })
 export class AppComponent {
   @ViewChild('videoRef1') videoElement!: ElementRef;
