@@ -1,45 +1,49 @@
 <div class="main-container">
-    <div class="hero">
-      <div class="ov">
-        <div class="hero-text">
-          <h1 class="typing-text"></h1>
-          <p class="fade-in-text above-scroll-text">Do you want to find the truth?</p>
-        </div>
-        <button (click)="scrollToNext()" class="fade-in-button">Click to Scroll Down</button>
-        <span class="fin">↓</span>
+  <div class="hero">
+    <div class="overlay">
+      <div class="hero-text">
+        <h1 class="typing-text"></h1>
+        <p class="fade-in-text above-scroll-text">Do you want to find the truth?</p>
       </div>
+      <button (click)="scrollToNext()" class="fade-in-button">Click to Scroll Down</button>
+      <span class="fade-in-arrow">↓</span>
+    </div>
+  </div>
+
+  <section id="next-section">
+    <div class="video-wrapper">
+      <video #videoRef1 class="video1" [loop]="false" [controls]="true" [muted]="false">
+        <source src="src/assets/videos/conspiracy_video1_compressed.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+
+      <p class="video-credit">
+        🎬 Credit: This video was created by the website's authors using royalty-free images and video footage.
+        The script and narration are original.
+      </p>
     </div>
 
-    <section id="next-section">
-      <div class="vw">
-        <video #videoRef1 class="v1" [loop]="false" [controls]="true" [muted]="false">
-          <source src="src/assets/videos/conspiracy_video1_compressed.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-        <p class="vc">
-          🎬 Credit: This video was created by the website's authors using royalty-free images and video footage.
-          The script and narration are original.
-        </p>
-      </div>
+  </section>
 
-    </section>
+
 
   <!-- SECTION 1: INTRODUCTION TO QANON -->
-  <section class="s-i">
+  <section class="section-intro">
     <div class="content-wrapper">
       <h2>What is QAnon?</h2>
       <p>A modern-day conspiracy that thrives on mystery, misinformation, and community-driven narratives.</p>
     </div>
   </section>
 
-  <!-- SECTION: QANON'S EXPANSION -->
-  <section class="sqexp">
-    <h2 class="tit">The Spread of QAnon</h2>
 
-    <div class="exp-cont">
+  <!-- SECTION: QANON'S EXPANSION -->
+  <section class="section-qanon-expansion">
+    <h2 class="section-title">The Spread of QAnon</h2>
+
+    <div class="expansion-container">
       <!-- First Column -->
-      <div class="exp-col">
-        <h3 class="ht">Trump & Political Influence</h3>
+      <div class="expansion-column">
+        <h3 class="highlight-title">Trump & Political Influence</h3>
         <p>
           As QAnon grew beyond anonymous forums, “bakers” and influencers shaped it around real-world events.
           Trump and his allies indirectly endorsed QAnon ideas at rallies, online, and even in official statements.
@@ -52,8 +56,8 @@
       </div>
 
       <!-- Second Column -->
-      <div class="exp-col">
-        <h3 class="ht">Misinformation & Public Impact</h3>
+      <div class="expansion-column">
+        <h3 class="highlight-title">Misinformation & Public Impact</h3>
         <p>
           QAnon fueled misinformation during global crises, including the COVID-19 pandemic.
           Some followers promoted dangerous remedies like <strong>Miracle Mineral Solution</strong> (industrial bleach) as a cure.
@@ -70,8 +74,8 @@
       </div>
 
       <!-- Third Column -->
-      <div class="exp-col">
-        <h3 class="ht">Meme Culture & Symbolism</h3>
+      <div class="expansion-column">
+        <h3 class="highlight-title">Meme Culture & Symbolism</h3>
         <p>
           QAnon thrived on <strong>Internet culture</strong>, using memes, in-jokes, and cryptic messages to engage followers.
           Many concepts were borrowed from <strong>films like <em>The Matrix</em> (1999) and <em>White Squall</em> (1996)</strong>.
@@ -87,44 +91,53 @@
     </div>
   </section>
 
+
+
   <!-- SECTION: TRACKING THE CRUMBS (New Layout) -->
-  <section class="tb">
-    <h2 class="tit" [ngStyle]="{'color': 'black'}">Tracking the Crumbs</h2>
-    <div class="box-c">
+  <section class="section-text-boxes">
+    <h2 class="section-title" [ngStyle]="{'color': 'black'}">Tracking the Crumbs</h2>
+
+    <div class="boxes-container">
       <div class="boxes-row">
-        <div class="ib">
-          <img src="src/assets/images/cr3.jpg" alt="Secret Knowledge Icon" class="ifm" />
-          <h3 class="ht">Secret Knowledge</h3>
+        <div class="info-box">
+          <img src="src/assets/images/cr3.jpg" alt="Secret Knowledge Icon" class="info-image" />
+          <h3 class="highlight-title">Secret Knowledge</h3>
           <p>
             Q would hint at having secret knowledge and make predictions for future events that never actually happened,
             all written in vague and confusing language.
           </p>
         </div>
-        <div class="ib">
-          <img src="src/assets/images/cr2.jpg" alt="Leading Questions Icon" class="ifm" />
-          <h3 class="ht">Leading Questions</h3>
+
+        <div class="info-box">
+          <img src="src/assets/images/cr2.jpg" alt="Leading Questions Icon" class="info-image" />
+          <h3 class="highlight-title">Leading Questions</h3>
           <p>
             Instead of providing real answers, Q mostly asked leading questions, guiding followers to interpret information
             as they wished.
           </p>
         </div>
-        <div class="ib">
-          <img src="src/assets/images/trump1.jpg" alt="Hero-Trump Narrative Icon" class="ifm" />
-          <h3 class="ht">Hero-Trump Narrative</h3>
+
+        <div class="info-box">
+          <img src="src/assets/images/trump1.jpg" alt="Hero-Trump Narrative Icon" class="info-image" />
+          <h3 class="highlight-title">Hero-Trump Narrative</h3>
           <p>
             Over time, the postings changed, becoming more focused on proving the story of Hero-Trump and his far-right
             political orbit.
           </p>
         </div>
       </div>
-      </div>
+    </div>
+
+    <!-- Media content below -->
+    <!--      <app-media-section [sources]="crumbsMedia"></app-media-section>-->
   </section>
 
-  <!-- SECTION: QNIVERSE OF MADNESS -->
-  <section class="quni">
-    <h2 class="tit">Qniverse of Madness</h2>
 
-    <div class="quni-txt">
+  <!-- SECTION: QNIVERSE OF MADNESS -->
+  <section class="section-qniverse">
+    <h2 class="section-title">Qniverse of Madness</h2>
+
+    <div class="qniverse-text-container">
       <p>
         As it became harder to ignore Q’s incompetency, followers started treating Q like a celebrity,
         using fandom behavior to validate inconsistencies. Constructing an alt-reality using books, fanart,
@@ -144,8 +157,8 @@
   </section>
 
   <!-- SECTION: FROM CONSPIRACY TO POPULISM -->
-  <section class="trans">
-    <h2 class="tit">From Conspiracy Thinking to Populist Narratives</h2>
+  <section class="section-transition">
+    <h2 class="section-title">From Conspiracy Thinking to Populist Narratives</h2>
 
     <p>
       While QAnon started as an online conspiracy movement, its core ideas—distrust in elites,
@@ -166,59 +179,62 @@
     </p>
   </section>
 
-  <!-- SECTION: POPULISM, FAR-RIGHT, AND CONSPIRACY THINKING -->
-  <section class="pop">
-    <h2 class="tit">Populism, Far-Right Ideology and Conspiracy Thinking</h2>
 
-    <div class="pop-cont">
+
+
+  <!-- SECTION: POPULISM, FAR-RIGHT, AND CONSPIRACY THINKING -->
+  <section class="section-populism">
+    <h2 class="section-title">Populism, Far-Right Ideology and Conspiracy Thinking</h2>
+
+    <div class="populism-container">
       <!-- First Column -->
-      <div class="pop-col">
+      <div class="populism-column">
         <div class="icon-container">
           <i class="fas fa-users"></i>
         </div>
-        <img src="src/assets/images/us_vs_them.jpg" alt="image" class="ifm" />
-        <h3 class="ht">Populism and Conspiracy Thinking</h3>
+        <img src="src/assets/images/us_vs_them.jpg" alt="image" class="info-image" />
+        <h3 class="highlight-title">Populism and Conspiracy Thinking</h3>
         <p>
           Populism is rooted in the belief in a <strong>good, homogenous, unified common people</strong> versus a <strong>corrupt elite</strong> that exploits them.
           This <strong>"us vs. them"</strong> mentality reinforces in-group identity and boosts the appeal of <strong>conspiracy theories</strong>.
         </p>
         <p>
           Conspiracy thinking is associated with <strong>lower levels of analytical thinking</strong> and <strong>education</strong>. Populists often seek <strong>simple, binary explanations</strong> for complex issues.
-          <span class="high-txt">They tend to overestimate co-occurring events and perceive intentionality where none exists.</span>
+          <span class="highlight-text">They tend to overestimate co-occurring events and perceive intentionality where none exists.</span>
         </p>
       </div>
 
       <!-- Second Column -->
-      <div class="pop-col">
+      <div class="populism-column">
         <div class="icon-container">
           <i class="fas fa-exclamation-circle"></i>
         </div>
-        <img src="src/assets/images/easy.jpg" alt="image" class="ifm" />
-        <h3 class="ht">How Misinformation Shapes Populist Beliefs</h3>
+        <img src="src/assets/images/easy.jpg" alt="image" class="info-image" />
+        <h3 class="highlight-title">How Misinformation Shapes Populist Beliefs</h3>
         <p>
-          <span class="high-txt">Belief in simple solutions</span> and <strong>black-and-white narratives</strong> offers comfort in uncertain times,
+          <span class="highlight-text">Belief in simple solutions</span> and <strong>black-and-white narratives</strong> offers comfort in uncertain times,
           giving people the illusion of <strong>predictability</strong>.
         </p>
         <p>
           <strong>Anti-immigrant sentiment:</strong> Populists may romanticize a "better past" and blame <strong>societal decline</strong> on minorities.
-          <span class="high-txt">They often attribute decline to low-status immigrants and refugees undermining national prosperity.</span>
+          <span class="highlight-text">They often attribute decline to low-status immigrants and refugees undermining national prosperity.</span>
         </p>
       </div>
 
       <!-- Third Column -->
-      <div class="pop-col">
+      <div class="populism-column">
         <div class="icon-container">
           <i class="fas fa-bolt"></i>
         </div>
-        <img src="src/assets/images/anger.jpg" alt="image" class="ifm" />
-        <h3 class="ht">Emotional Manipulation & Polarization</h3>
+        <img src="src/assets/images/anger.jpg" alt="image" class="info-image" />
+        <h3 class="highlight-title">Emotional Manipulation & Polarization</h3>
         <p>
           <strong>Anger is central to populism</strong>, especially when cultural identity feels threatened.
-          <span class="high-txt">Anger emerges from perceived unfairness and cultural threats.</span>
+          <span class="highlight-text">Anger emerges from perceived unfairness and cultural threats.</span>
         </p>
         <p>
           <strong>Blame attribution:</strong> Populists often believe that <strong>external forces like the government</strong> are at fault.
-          <span class="high-txt">When angry, people are more likely to assign blame to external causes.</span>
+          <span class="highlight-text">When angry, people are more likely to assign blame to external causes.</span>
         </p>
       </div>
     </div>
@@ -226,8 +242,8 @@
 
 
   <!-- SECTION: WHY THIS IS A CONCERN -->
-  <section class="concern">
-    <h2 class="tit">Why This Should Worry Us</h2>
+  <section class="section-concern">
+    <h2 class="section-title">Why This Should Worry Us</h2>
     <p class="question-intro">
       Populism and far-right ideologies start to spread all across the world, even in countries with a strong liberal history.
       <em>How can you spot them? Pay attention to the following characteristics.</em>
@@ -237,10 +253,10 @@
       <p>
         <strong>Polarization & Radicalization:</strong>
         Populist rhetoric encourages <strong>blaming others for societal issues</strong>, absolving responsibility from those in power.
-        <span class="high-txt">Populists tend to blame others in most problems while absolving the (right) people of responsibility.</span>
+        <span class="highlight-text">Populists tend to blame others in most problems while absolving the (right) people of responsibility.</span>
       </p>
       <!-- Media content below -->
-            <app-media-section [sources]="populism1" label=""></app-media-section>
+      <app-media-section [sources]="populism1" label=""></app-media-section>
 
       <p>
         <strong>Spreading Misinformation:</strong>
@@ -248,16 +264,20 @@
         The COVID-19 pandemic is an example, where <strong>far-right conspiracy theories encouraged people to drink bleach</strong> as a cure.
       </p>
       <!-- Media content below -->
-            <app-media-section [sources]="populism2" label=""></app-media-section>
+      <app-media-section [sources]="populism2" label=""></app-media-section>
+
       <p>
         <strong>Encouraging Fast Thinking & Stereotypes:</strong>
         Populist ideologies promote <strong>superficial, “fast” thinking</strong>, making people more susceptible to <strong>stereotypes and extreme ideologies</strong>.
-        <span class="high-txt">Anger prompts people to follow quick thinking and increases stereotypes as a way to reduce uncertainty.</span>
+        <span class="highlight-text">Anger prompts people to follow quick thinking and increases stereotypes as a way to reduce uncertainty.</span>
       </p>
       <!-- Media content below -->
-            <app-media-section [sources]="populism3" label=""></app-media-section>
+      <app-media-section [sources]="populism3" label=""></app-media-section>
     </div>
   </section>
+
+
+
 
   <!-- SECTION 4: FINAL THOUGHT -->
   <section class="section-cta">
@@ -266,9 +286,11 @@
     <button (click)="scrollToQuestions()" class="cta-button">Test your abilities</button>
   </section>
 
+
+
   <!-- SECTION: CRITICAL THINKING QUESTIONS -->
   <section class="section-questions" id="questions-section">
-    <h2 class="tit">QAnon: Think Critically</h2>
+    <h2 class="section-title">QAnon: Think Critically</h2>
     <p class="question-intro">
       Below are common QAnon claims. Read and watch the sources, analyze the evidence, and ask yourself:
       <em>How do we determine what is true? What makes you believe a source?</em>
@@ -279,7 +301,7 @@
       <div class="question-box">
         <h3>1. Do Democrats and Hollywood elites run a secret child trafficking ring?</h3>
         <p><strong>Claim:</strong> Only Trump can stop this alleged network.</p>
-        <div class="rb">
+        <div class="response-buttons">
           <button class="true-btn" (click)="checkAnswer('answer1', true)">True</button>
           <button class="false-btn" (click)="checkAnswer('answer1', false)">False</button>
         </div>
@@ -301,7 +323,7 @@
       <div class="question-box">
         <h3>2. Has Q correctly predicted many world events?</h3>
         <p><strong>Claim:</strong> Q's accurate predictions prove QAnon is real. Is it the case?</p>
-        <div class="rb">
+        <div class="response-buttons">
           <button class="true-btn" (click)="checkAnswer('answer2', true)">True</button>
           <button class="false-btn" (click)="checkAnswer('answer2', false)">False</button>
         </div>
@@ -323,7 +345,7 @@
       <div class="question-box">
         <h3>3. Are people brainwashed by the mainstream media if they don’t believe in QAnon?</h3>
         <p><strong>Claim:</strong> Only a few enlightened people know the truth.</p>
-        <div class="rb">
+        <div class="response-buttons">
           <button class="true-btn" (click)="checkAnswer('answer3', true)">True</button>
           <button class="false-btn" (click)="checkAnswer('answer3', false)">False</button>
         </div>
@@ -345,48 +367,49 @@
   </section>
 
   <section class="section-questions" id="questions-section2">
-    <h2 class="tit">Populism and Conspiracy Thinking : Think critically</h2>
+    <h2 class="section-title">Populism and Conspiracy Thinking : Think critically</h2>
     <p class="question-intro">
       Below are common Populism and Conspiracy Thinking claims. Read and watch the sources, analyze the evidence, and ask yourself:
       <em>How do we determine what is true? What makes you believe a source? How these events make you feel?</em>
 
     <div class="questions-container">
 
-    <div *ngFor="let q of questionsPopulism" class="question-box">
-      <h3>{{ q.question }}</h3>
+      <div *ngFor="let q of questionsPopulism" class="question-box">
+        <h3>{{ q.question }}</h3>
 
-      <!-- Context Media (before options) -->
-      <app-media-section *ngIf="q.contextMedia" [sources]="q.contextMedia" label="Context:"></app-media-section>
+        <!-- Context Media (before options) -->
+        <app-media-section *ngIf="q.contextMedia" [sources]="q.contextMedia" label="Context:"></app-media-section>
 
-      <div class="rb mc">
-        <button *ngFor="let opt of q.options" (click)="checkAnswerPopulism(q.id, opt.key)">
-          {{ opt.key }}) {{ opt.text }}
-        </button>
-      </div>
+        <div class="response-buttons multiple-choice">
+          <button *ngFor="let opt of q.options" (click)="checkAnswerPopulism(q.id, opt.key)">
+            {{ opt.key }}) {{ opt.text }}
+          </button>
+        </div>
 
-      <div *ngIf="userAnswers[q.id]" class="feedback">
-        <p [ngClass]="{
+        <div *ngIf="userAnswers[q.id]" class="feedback">
+          <p [ngClass]="{
             'correct': userAnswers[q.id] === 'correct',
             'incorrect': userAnswers[q.id] === 'incorrect'
           }">
-          {{ feedbackMessages[q.id] }}
-        </p>
-        <p><strong>Explanation:</strong> {{ q.explanation }}</p>
+            {{ feedbackMessages[q.id] }}
+          </p>
+          <p><strong>Explanation:</strong> {{ q.explanation }}</p>
+        </div>
+
+        <button class="toggle-btn" (click)="toggleAnswer(q.id)">
+          {{ answersVisibility[q.id] ? 'Hide sources' : 'Check the sources' }}
+        </button>
+
+        <div *ngIf="answersVisibility[q.id]" class="answer-content">
+
+          <app-media-section [sources]="q.sources"></app-media-section>
+        </div>
       </div>
-
-      <button class="toggle-btn" (click)="toggleAnswer(q.id)">
-        {{ answersVisibility[q.id] ? 'Hide sources' : 'Check the sources' }}
-      </button>
-
-      <div *ngIf="answersVisibility[q.id]" class="answer-content">
-
-        <app-media-section [sources]="q.sources"></app-media-section>
-      </div>
-    </div>
     </div>
   </section>
 
-  <footer class="footer">
+
+  <footer class="site-footer">
     <p>
       ⚠️ Most of the media used on this website — including videos, images, and social posts — were sourced from real public content found on social media platforms and royalty-free libraries like Pexels.
       The only exception is the introductory video about QAnon, which was created by us.
@@ -401,12 +424,12 @@
 
     <p>The theoretical content on this website was carefully documented and if interested, you can check the bibliography below.</p>
 
-    <div class="bib">
-      <button class="tog-bib" (click)="showBibliography = !showBibliography">
+    <div class="bibliography">
+      <button class="toggle-bibliography" (click)="showBibliography = !showBibliography">
         {{ showBibliography ? 'Hide References ▲' : 'Show References ▼' }}
       </button>
 
-      <div class="bib-cont" *ngIf="showBibliography">
+      <div class="bibliography-content" *ngIf="showBibliography">
         <ul>
           <li>BBC. (1957). <em>Spaghetti tree [Colorised still]</em>. Open Newsroom. <a href="https://open.prodir.com/en/2023/03/the-swiss-spaghetti-tree-hoax/" target="_blank">Link</a></li>
           <li>Hannah, M. N. (2021). A Conspiracy of Data: QAnon, Social Media, and Information Visualization. <em>Social Media + Society, 7(3)</em>. <a href="https://doi.org/10.1177/20563051211036064" target="_blank">DOI</a></li>
@@ -424,5 +447,4 @@
     </div>
   </footer>
 </div>
-
 <router-outlet />
