@@ -1,22 +1,22 @@
-.ms {
+.media-section {
   margin-top: 1em;
 }
 
-.mg {
+.media-grid {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
   margin-top: 0.5em;
 }
 
-.mg a {
+.media-grid a {
   text-decoration: underline;
   color: #66b;
 }
 
-.mg img,
-.mg video,
-.mg iframe {
+.media-grid img,
+.media-grid video,
+.media-grid iframe {
   max-width: 300px;
   max-height: 200px;
   border-radius: 8px;
@@ -24,7 +24,7 @@
   object-fit: cover;
 }
 
-.mg iframe {
+.media-grid iframe {
   aspect-ratio: 16 / 9;
   width: 100%;
   max-width: 300px;

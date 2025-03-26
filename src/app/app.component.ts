@@ -7,7 +7,7 @@ import {MediaSectionComponent} from './media-section/media-section.component';
   selector: 'app-root',
   imports: [RouterOutlet, CommonModule, MediaSectionComponent],
   templateUrl: './app.component.html',
-  styleUrl: './new.css'
+  styleUrl: './app.component.css'
 })
 export class AppComponent {
   @ViewChild('videoRef1') videoElement!: ElementRef;
@@ -104,7 +104,7 @@ export class AppComponent {
 
       sources: [
         { type: 'video', src: 'src/assets/videos/qp2.mp4' },
-        { type: 'youtube', src:"https://www.youtube.com/embed/1FHuUMd1uy0?si=QSlynqcxex88YIB7", label:  "video"},
+        { type: 'youtube', src:"https://www.youtube.com/embed/1FHuUMd1uy0?si=QSlynqcxex88YIB7"},
         { type: 'tiktok', src: "https://www.tiktok.com/@euronews.tv/video/7304628940914560288", id: "7304628940914560288" ,placeholder: 'src/assets/images/tiktok-preview.png'},
         { type: 'link', src: 'https://www.bnnvara.nl/joop/artikelen/woningnood-niet-veroorzaakt-door-vluchtelingen-maar-door-vvd', label: 'Article from Bnnvara' },
       ]
@@ -124,7 +124,7 @@ export class AppComponent {
         { type: 'text', content: 'The  leftist politician Frans Timmermans from the green/labour party has agreed to give away Dutch houses to foreigners leaving more than 70% procent of the dutch citizens without a home \n' },
         { type: 'image', src: 'src/assets/images/qp3.png' }
       ],
-      sources: [ { type: 'text', src: 'No sources this time, you have only the context provided and the previous questions' }]
+      sources: [ { type: 'text', content: 'No sources this time, you have only the context provided and the previous questions' }]
     },
     {
       id: 'populismQ4',
@@ -139,8 +139,8 @@ export class AppComponent {
       explanation: 'This slogan creates fear about loss of control and invokes threats to national identity.',
       contextMedia: [
         { type: 'image', src: 'src/assets/images/qp4-1.png' },
-        // { type: 'youtube', src: 'https://youtube.com/embed/5mZLZGU7hmo?si=jJvrHnyZgg6KuFqi',label:  "video" }
-        { type: 'youtube', src: 'https://www.youtube.com/embed/dFpXZaBnnC0?si=lhSQhBwbxQ3k3NGC',label:  "video" }
+        { type: 'youtube', src: "https://www.youtube.com/embed/5mZLZGU7hmo?si=jJvrHnyZgg6KuFqi"},
+        { type: 'youtube', src: "https://www.youtube.com/embed/dFpXZaBnnC0?si=lhSQhBwbxQ3k3NGC" }
       ],
       sources: [
         { type: 'text', content: 'No sources this time, you have only the context provided and the information on this website' }
