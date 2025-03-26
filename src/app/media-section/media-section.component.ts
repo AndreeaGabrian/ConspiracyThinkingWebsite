@@ -16,7 +16,7 @@ export class MediaSectionComponent  {
 
 
   @Input() sources: any[] = [];
-  @Input() label: string = 'Sources';
+  @Input() label: string = 'Sources:';
 
 
   sanitizeUrl(url: string): SafeResourceUrl {

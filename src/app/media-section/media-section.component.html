@@ -1,5 +1,5 @@
 <div class="media-section" *ngIf="sources && sources.length">
-  <strong>{{label}}:</strong>
+  <strong>{{label}}</strong>
   <div class="media-grid">
     <ng-container *ngFor="let media of sources">
       <a *ngIf="media.type === 'link'" [href]="media.src" target="_blank" class="media-card link-card">

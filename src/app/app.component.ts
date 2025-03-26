@@ -16,6 +16,8 @@ export class AppComponent {
   userAnswers: { [key: string]: string } = {};
   feedbackMessages: { [key: string]: string } = {};
   sourceButtonText: string = "Check the sources";
+  showBibliography = false;
+
 
 
   correctAnswers: { [key: string]: boolean } = {
@@ -23,6 +25,24 @@ export class AppComponent {
     answer2: false,
     answer3: false
   };
+
+  populism1 = [
+    { type: 'youtube', src: 'https://youtube.com/embed/JH4zNLXlcYE?si=agP9AQgFDRM1Pblx' },
+    { type: 'youtube', src: 'https://youtube.com/embed/TExdmFEETPQ?si=LmqecN-pKIvVYoIw' },
+    { type: 'youtube', src: 'https://youtube.com/embed/Tsh9p5H-g5k?si=OUcRPSP1q4HB4W13' },
+  ];
+
+  populism2 = [
+    { type: 'youtube', src: 'https://youtube.com/embed/IOFR3slDz8U' },
+    { type: 'youtube', src: 'https://youtube.com/embed/PAauiLx3AvQ?si=7LkSCCqrVozXa9NB' },
+  ];
+
+  populism3 = [
+    { type: 'image', src: 'src/assets/images/anger2.png', alt: 'image' },
+    { type: 'youtube', src: "https://youtube.com/embed/5mZLZGU7hmo?si=_s9kPNWtXZlTmnEF" },
+    { type: 'youtube', src: "https://youtube.com/embed/rUJwxsKHJps?si=J2QAUYjGCKDPc7uD" },
+  ];
+
 
   mediaSources = {
     answer1: [

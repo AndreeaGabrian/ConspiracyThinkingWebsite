@@ -11,10 +11,18 @@
     </div>
 
     <section id="next-section">
-      <video #videoRef1 class="video1" [loop]="false" [controls]="true" [muted]="false" >
-        <source src="src/assets/videos/conspiracy_video1_compressed.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+      <div class="video-wrapper">
+        <video #videoRef1 class="video1" [loop]="false" [controls]="true" [muted]="false">
+          <source src="src/assets/videos/conspiracy_video1_compressed.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+
+        <p class="video-credit">
+          🎬 Credit: This video was created by the website's authors using royalty-free images and video footage.
+          The script and narration are original.
+        </p>
+      </div>
+
     </section>
 
 
@@ -90,24 +98,38 @@
     <h2 class="section-title" [ngStyle]="{'color': 'black'}">Tracking the Crumbs</h2>
 
     <div class="boxes-container">
-      <!-- First Box -->
-      <div class="info-box">
-        <h3 class="highlight-title">Secret Knowledge</h3>
-        <p>Q would hint at having secret knowledge and make predictions for future events that never actually happened, all written in vague and confusing language.</p>
+      <div class="boxes-row">
+        <div class="info-box">
+          <img src="src/assets/images/cr3.jpg" alt="Secret Knowledge Icon" class="info-image" />
+          <h3 class="highlight-title">Secret Knowledge</h3>
+          <p>
+            Q would hint at having secret knowledge and make predictions for future events that never actually happened,
+            all written in vague and confusing language.
+          </p>
+        </div>
+
+        <div class="info-box">
+          <img src="src/assets/images/cr2.jpg" alt="Leading Questions Icon" class="info-image" />
+          <h3 class="highlight-title">Leading Questions</h3>
+          <p>
+            Instead of providing real answers, Q mostly asked leading questions, guiding followers to interpret information
+            as they wished.
+          </p>
+        </div>
+
+        <div class="info-box">
+          <img src="src/assets/images/trump1.jpg" alt="Hero-Trump Narrative Icon" class="info-image" />
+          <h3 class="highlight-title">Hero-Trump Narrative</h3>
+          <p>
+            Over time, the postings changed, becoming more focused on proving the story of Hero-Trump and his far-right
+            political orbit.
+          </p>
+        </div>
+      </div>
       </div>
 
-      <!-- Second Box -->
-      <div class="info-box">
-        <h3 class="highlight-title">Leading Questions</h3>
-        <p>Instead of providing real answers, Q mostly asked leading questions, guiding followers to interpret information as they wished.</p>
-      </div>
-
-      <!-- Third Box -->
-      <div class="info-box wide-box">
-        <h3 class="highlight-title">Hero-Trump Narrative</h3>
-        <p>Over time, the postings changed, becoming more focused on proving the story of Hero-Trump and his far-right political orbit.</p>
-      </div>
-    </div>
+      <!-- Media content below -->
+<!--      <app-media-section [sources]="crumbsMedia"></app-media-section>-->
   </section>
 
 
@@ -170,6 +192,7 @@
         <div class="icon-container">
           <i class="fas fa-users"></i>
         </div>
+        <img src="src/assets/images/us_vs_them.jpg" alt="image" class="info-image" />
         <h3 class="highlight-title">Populism and Conspiracy Thinking</h3>
         <p>
           Populism is rooted in the belief in a <strong>good, homogenous, unified common people</strong> versus a <strong>corrupt elite</strong> that exploits them.
@@ -186,6 +209,7 @@
         <div class="icon-container">
           <i class="fas fa-exclamation-circle"></i>
         </div>
+        <img src="src/assets/images/easy.jpg" alt="image" class="info-image" />
         <h3 class="highlight-title">How Misinformation Shapes Populist Beliefs</h3>
         <p>
           <span class="highlight-text">Belief in simple solutions</span> and <strong>black-and-white narratives</strong> offers comfort in uncertain times,
@@ -202,6 +226,7 @@
         <div class="icon-container">
           <i class="fas fa-bolt"></i>
         </div>
+        <img src="src/assets/images/anger.jpg" alt="image" class="info-image" />
         <h3 class="highlight-title">Emotional Manipulation & Polarization</h3>
         <p>
           <strong>Anger is central to populism</strong>, especially when cultural identity feels threatened.
@@ -219,6 +244,10 @@
   <!-- SECTION: WHY THIS IS A CONCERN -->
   <section class="section-concern">
     <h2 class="section-title">Why This Should Worry Us</h2>
+    <p class="question-intro">
+      Populism and far-right ideologies start to spread all across the world, even in countries with a strong liberal history.
+      <em>How can you spot them? Pay attention to the following characteristics.</em>
+    </p>
 
     <div class="concern-container">
       <p>
@@ -226,18 +255,24 @@
         Populist rhetoric encourages <strong>blaming others for societal issues</strong>, absolving responsibility from those in power.
         <span class="highlight-text">Populists tend to blame others in most problems while absolving the (right) people of responsibility.</span>
       </p>
+      <!-- Media content below -->
+            <app-media-section [sources]="populism1" label=""></app-media-section>
 
       <p>
         <strong>Spreading Misinformation:</strong>
         Conspiracy thinking fuels <strong>distrust in science and institutions</strong>, leading to dangerous real-world actions.
         The COVID-19 pandemic is an example, where <strong>far-right conspiracy theories encouraged people to drink bleach</strong> as a cure.
       </p>
+      <!-- Media content below -->
+            <app-media-section [sources]="populism2" label=""></app-media-section>
 
       <p>
         <strong>Encouraging Fast Thinking & Stereotypes:</strong>
         Populist ideologies promote <strong>superficial, “fast” thinking</strong>, making people more susceptible to <strong>stereotypes and extreme ideologies</strong>.
         <span class="highlight-text">Anger prompts people to follow quick thinking and increases stereotypes as a way to reduce uncertainty.</span>
       </p>
+      <!-- Media content below -->
+            <app-media-section [sources]="populism3" label=""></app-media-section>
     </div>
   </section>
 
@@ -343,7 +378,7 @@
       <h3>{{ q.question }}</h3>
 
       <!-- Context Media (before options) -->
-      <app-media-section *ngIf="q.contextMedia" [sources]="q.contextMedia" label="Context"></app-media-section>
+      <app-media-section *ngIf="q.contextMedia" [sources]="q.contextMedia" label="Context:"></app-media-section>
 
       <div class="response-buttons multiple-choice">
         <button *ngFor="let opt of q.options" (click)="checkAnswerPopulism(q.id, opt.key)">
@@ -373,6 +408,45 @@
     </div>
   </section>
 
+
+  <footer class="site-footer">
+    <p>
+      ⚠️ Most of the media used on this website — including videos, images, and social posts — were sourced from real public content found on social media platforms and royalty-free libraries like Pexels.
+      The only exception is the introductory video about QAnon, which was created by us.
+    </p>
+    <p>
+      Our choice to use real-world media was intentional: to realistically reflect the kind of information people encounter online every day.
+      Creating fictional examples would not have captured the authentic, immersive nature of how conspiracy narratives spread.
+    </p>
+    <p>
+      This website encourages viewers to engage critically with the media they consume — to question, analyze, and reflect on how content is presented, especially in emotionally or politically charged contexts.
+    </p>
+
+    <p>The theoretical content on this website was carefully documented and if interested, you can check the bibliography below.</p>
+
+    <div class="bibliography">
+      <button class="toggle-bibliography" (click)="showBibliography = !showBibliography">
+        {{ showBibliography ? 'Hide References ▲' : 'Show References ▼' }}
+      </button>
+
+      <div class="bibliography-content" *ngIf="showBibliography">
+        <ul>
+          <li>BBC. (1957). <em>Spaghetti tree [Colorised still]</em>. Open Newsroom. <a href="https://open.prodir.com/en/2023/03/the-swiss-spaghetti-tree-hoax/" target="_blank">Link</a></li>
+          <li>Hannah, M. N. (2021). A Conspiracy of Data: QAnon, Social Media, and Information Visualization. <em>Social Media + Society, 7(3)</em>. <a href="https://doi.org/10.1177/20563051211036064" target="_blank">DOI</a></li>
+          <li>Linvill, D., Chambers, M., Duck, J., & Sheffield, S. (2021). Mapping the messenger: Exploring the disinformation of QAnon. <em>First Monday</em>. <a href="https://doi.org/10.5210/fm.v26i12.11745" target="_blank">DOI</a></li>
+          <li>Reinhard, C. D., Stanley, D., & Howell, L. (2021). Fans of Q: The Stakes of QAnon’s Functioning as Political Fandom. <em>American Behavioral Scientist, 66(8)</em>, 1152–1172. <a href="https://doi.org/10.1177/00027642211042294" target="_blank">DOI</a></li>
+          <li><a href="https://qalerts.app/" target="_blank">qalerts.app</a>: Archive of all Q posts and related community tools.</li>
+          <li><a href="https://www.dailydot.com/debug/qanon-failed-predictions/" target="_blank">QAnon Failed Predictions – Daily Dot</a></li>
+          <li><a href="https://www.thedailybeast.com/pro-trump-conspiracy-qanon-keeps-missing-deadlines/" target="_blank">QAnon’s Missed Deadlines – Daily Beast</a></li>
+          <li>Brian Holoyda. "QAnon". <em>Encyclopedia Britannica</em>, 3 Feb. 2025. <a href="https://www.britannica.com/topic/QAnon" target="_blank">Link</a></li>
+          <li>Erisen, C. et al. (2021). Psychological Correlates of Populist Attitudes. <em>Advances in Political Psychology, 42(S1)</em>, 149-171. <a href="https://doi.org/10.1111/pops.12768" target="_blank">DOI</a></li>
+          <li>Rico, G., Guinjoan, M., & Anduiza, E. (2017). The Emotional Underpinnings of Populism. <em>Swiss Political Science Review, 23(4)</em>, 444-461. <a href="https://doi.org/10.1111/spsr.12261" target="_blank">DOI</a></li>
+          <li>Wildschut, T., Sedikides, C., & Smeekes, A. (2021). Nostalgia and Populism. <em>Zeithistorische Forschungen, 18</em>, 125-132. <a href="https://doi.org/10.14765/zzf.dok-2297" target="_blank">DOI</a></li>
+        </ul>
+      </div>
+    </div>
+
+  </footer>
 
 
 
