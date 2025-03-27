@@ -2,6 +2,8 @@
 
 This represents a project in the form of a website that aims to present how conspiracy thinking works. It starts by illustrating the emotional and psychological mechanisms behind a conspiracy by analysing the case of a well-known QAnon conspiracy. Then, the focus shifts to explaining how populist far-right movements use the same narratives and mechanisms as conspiracies, posing a threat to democracy. The last part of the website contains questions and conspiracy thinking claims that will test your critical thinking. Various media sources accompany each question and it's up to you to decide what to believe and what not.
 
+The website can be accessed at: [link](https://conspiracywebsiteproject.netlify.app/) 
+
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.1.6.
 
 ## Development server
