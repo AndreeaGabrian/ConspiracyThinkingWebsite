@@ -1,17 +1,386 @@
-.hero{background-image:url("/src/assets/images/hero-img.jpg");background-size:cover;background-position:center;background-repeat:no-repeat;background-blend-mode:overlay;width:100%;height:120vh;position:relative;display:flex;align-items:center;justify-content:center}.video1{position:relative;width:90%;height:auto;max-width:1000px;border:8px solid #2d2d2d;border-radius:15px;box-shadow:0px 0px 20px rgba(255,255,255,0.5);display:block;margin:50px auto}.overlay{position:absolute;display:inline-grid;bottom:30%;left:50%;transform:translateX(-50%)}
-button{font-family:'Courier New',monospace;padding:12px 24px;font-size:18px;font-weight:bold;border:none;background:whitesmoke;color:black;border-radius:50px;cursor:pointer;transition:all 0.3s ease-in-out;box-shadow:0px 0px 10px rgba(253,246,210,0.8);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px}
-button:hover{background:#d9ecf8;color:black;transform:scale(1.1);box-shadow:0px 0px 15px rgb(217,236,248)}.fade-in-arrow{display:flex;flex-direction:column;align-items:center;justify-content:center;color:whitesmoke;font-size:65px;opacity:0;animation:fadeIn 2s ease-in-out 4s forwards,bounce 1.5s infinite}
-@keyframes bounce{0%,100%{transform:translateY(0)}
-  50%{transform:translateY(5px)}}
-#next-section{display:flex;align-items:center;justify-content:center;height:100vh;background:#111}
-#next-section2{height:100vh;display:flex;align-items:center;justify-content:center;background:#f4f4f4}.main-container{background-color:black}.typing-text::after{content:"Are conspiracy theories real?";color:white;display:inline-block;overflow:hidden;white-space:nowrap;animation:typing 3s steps(25,end),blink 0.8s infinite;border-right:3px solid white}
-@keyframes typing{from{width:0}
-  to{width:100%}}
-@keyframes blink{50%{border-color:transparent}}.above-scroll-text{display:flex;justify-content:center}.fade-in-text{color:white}.fade-in-text,.fade-in-button{opacity:0;animation:fadeIn 2s ease-in-out 4s forwards}
-@keyframes fadeIn{from{opacity:0}
-  to{opacity:1}}.section-intro{display:flex;justify-content:center;align-items:center;text-align:center;height:80vh;color:white}.section-intro.content-wrapper{max-width:800px;padding:20px;background-image:url("/src/assets/images/what.jpg");background-size:cover;background-position:center;background-repeat:no-repeat;background-blend-mode:overlay;border-radius:10px}.section-qanon-expansion{background:black;padding:60px 10%;text-align:center}.expansion-container{display:flex;justify-content:space-between;text-align:left;gap:30px}.expansion-column{flex:1;max-width:30%;background:white;color:black;padding:20px;border-radius:15px;box-shadow:0px 4px 15px rgba(255,255,255,0.2);text-align:left}.highlight-title{font-size:1.5rem;font-weight:bold;color:black;margin-bottom:10px;text-align:center}
-@media(max-width:1024px){.expansion-container{flex-direction:column;align-items:center}.expansion-column{max-width:90%}}.section-text-image{display:flex;align-items:center;justify-content:space-between;padding:100px 10%;background:#f4f4f4;color:black}.text-content{width:50%}.image-content{width:50%;display:flex;justify-content:center}.image-content img{max-width:100%;border-radius:10px;box-shadow:0px 0px 15px rgba(0,0,0,0.3)}.section-text-boxes{background-image:url("/src/assets/images/hands_window.jpg");background-blend-mode:overlay;padding:80px 10%;text-align:center;border-radius:10px}.section-dark{background:#111;color:white;padding:100px 10%;text-align:center}.section-title{text-align:center;font-size:2.5rem;margin-bottom:40px;color:white}.boxes-container{display:flex;flex-wrap:wrap;justify-content:center;gap:20px;padding:40px 10%}.boxes-row{display:flex;flex-wrap:wrap;justify-content:center;gap:1.5rem;margin:2rem auto;max-width:1200px}.info-box{flex:1 1 300px;background:white;border-radius:16px;padding:1.5rem;box-shadow:0 4px 16px rgba(0,0,0,0.15);text-align:center;max-width:360px}.info-image{width:100%;max-height:160px;object-fit:cover;border-radius:12px;margin-bottom:1rem}.highlight-title{font-size:1.5rem;font-weight:bold;color:black;margin-bottom:10px}
-@media(max-width:768px){.boxes-container{flex-direction:column;align-items:center}.info-box,.wide-box{width:90%}}.section-qniverse{padding:60px 10%;text-align:center;background:black;color:white}.section-title{font-size:2.5rem;margin-bottom:40px}.qniverse-text-container{display:flex;justify-content:space-between;text-align:left;gap:30px}.qniverse-text-container p{flex:1;max-width:30%;font-size:1.1rem}
-@media(max-width:1024px){.qniverse-text-container{flex-direction:column;align-items:center}.qniverse-text-container p{max-width:90%}}.section-transition{padding:40px 10%;text-align:center;background:#1a1a1a;color:white}.section-transition p{font-size:1.2rem;max-width:800px;margin:10px auto;line-height:1.6}.section-populism,.section-concern{padding:60px 10%;text-align:center;background:black;color:white}.section-title{font-size:2.5rem;margin-bottom:40px}.populism-container{display:flex;justify-content:space-between;text-align:left;gap:30px}.populism-column{flex:1;max-width:30%;background:white;color:black;padding:20px;border-radius:15px;box-shadow:0px 4px 15px rgba(255,255,255,0.2);text-align:left}.highlight-text{background-color:orange;color:black;font-weight:bold;padding:2px 4px}.concern-container p{font-size:1.2rem;margin-bottom:20px;text-align:left;line-height:1.6}
-@media(max-width:1024px){.populism-container{flex-direction:column;align-items:center}.populism-column{max-width:90%}}.section-cta{display:flex;flex-direction:column;align-items:center;text-align:center;padding:80px 10%;background:black;color:white}.cta-button{font-size:18px;font-weight:bold;padding:14px 28px;border:2px solid white;background:transparent;color:white;border-radius:50px;cursor:pointer;transition:all 0.3s ease-in-out}.cta-button:hover{background:white;color:black}.section-questions{padding:60px 10%;text-align:center;background:black;color:white}.question-intro{font-size:1.2rem;max-width:800px;margin:10px auto 30px;line-height:1.6}.questions-container{display:flex;flex-wrap:wrap;justify-content:center;gap:20px}.question-box{background:white;color:black;padding:20px;border-radius:15px;box-shadow:0px 4px 15px rgba(255,255,255,0.2);width:55%;min-width:380px;text-align:left;transition:transform 0.3s}.question-box:hover{transform:scale(1.03)}.response-buttons{display:flex;justify-content:space-between;margin:10px 0}.true-btn,.false-btn{padding:8px 15px;border:none;border-radius:8px;font-weight:bold;cursor:pointer}.true-btn{background-color:green;color:white}.false-btn{background-color:red;color:white}.true-btn:hover{background-color:darkgreen}.false-btn:hover{background-color:darkred}.toggle-btn{background-color:rgb(45,45,45);color:white;border:none;padding:10px;cursor:pointer;border-radius:8px;font-weight:bold;margin-top:10px}.toggle-btn:hover{background-color:#3a3939;color:white}.answer-content{margin-top:10px;padding-top:10px;border-top:1px solid #ccc}.answer-content a{color:blue;text-decoration:none}.answer-content a:hover{text-decoration:underline}
-@media(max-width:1024px){.questions-container{flex-direction:column;align-items:center}.question-box{width:90%}}.questions-container{display:flex;flex-direction:column;align-items:center;gap:20px}.feedback{margin-top:10px;padding:10px;font-weight:bold}.correct{color:green}.incorrect{color:red}.media-section{margin-top:1em}.media-grid{display:flex;flex-wrap:wrap;gap:1rem;margin-top:0.5em}.media-grid a{text-decoration:underline;color:#66b}.media-grid img,.media-grid video,.media-grid iframe{max-width:300px;max-height:200px;border-radius:8px;box-shadow:0 0 8px rgba(0,0,0,0.2);object-fit:cover}.media-grid iframe{aspect-ratio:16/9;width:100%;max-width:300px}.response-buttons.multiple-choice{display:flex;flex-direction:column;gap:0.75rem;margin-top:1.5rem;align-items:stretch;text-align:left}.response-buttons.multiple-choice button{background-color:#f3f3f3;color:#111;border:none;border-radius:12px;padding:0.8rem 1.2rem;font-family:'Courier New',monospace;font-size:1rem;cursor:pointer;transition:background-color 0.2s ease;text-align:left;box-shadow:0 4px 10px rgba(0,0,0,0.15)}.response-buttons.multiple-choice button:hover{background-color:#e6e6e6}.video-wrapper{display:flex;flex-direction:column;align-items:center;text-align:center}.video-credit{font-size:0.75rem;color:#ccc;font-style:italic;margin-top:1rem;max-width:700px}.site-footer{background-color:#111;color:#ccc;font-size:0.95rem;font-family:'Courier New',monospace;padding:2rem;text-align:center;border-top:1px solid #333;margin-top:4rem;line-height:1.6}.bibliography{margin-top:2rem;text-align:center}.toggle-bibliography{background-color:#000;color:#fff;border:none;padding:0.75rem 1.5rem;border-radius:6px;cursor:pointer;font-family:'Courier New',monospace;font-size:0.9rem;margin-bottom:1rem}.bibliography-content{text-align:left;max-width:900px;margin:0 auto;color:#ccc;font-size:0.9rem}.bibliography-content ul{padding-left:1.5rem;list-style-type:disc}.bibliography-content li{margin-bottom:0.5rem}.bibliography-content em{font-style:italic}
+/* HIGHLIGHTED TITLES */
+.highlight-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: black;
+  margin-bottom: 10px;
+}
+
+/* RESPONSIVENESS */
+@media (max-width: 768px) {
+  .boxes-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .info-box, .wide-box {
+    width: 90%;
+  }
+}
+
+/* GENERAL SECTION STYLING */
+.section-qniverse {
+  padding: 60px 10%;
+  text-align: center;
+  background: black;
+  color: white;
+}
+
+/* TITLE STYLING */
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+/* CONTAINER FOR 3-COLUMN TEXT LAYOUT */
+.qniverse-text-container {
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+  gap: 30px;
+}
+
+/* INDIVIDUAL COLUMN STYLING */
+.qniverse-text-container p {
+  flex: 1;  /* Each paragraph takes equal space */
+  max-width: 30%; /* Keeps columns balanced */
+  font-size: 1.1rem;
+}
+
+/* RESPONSIVE BEHAVIOR */
+@media (max-width: 1024px) {
+  .qniverse-text-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .qniverse-text-container p {
+    max-width: 90%;
+  }
+}
+
+/* TRANSITION SECTION */
+.section-transition {
+  padding: 40px 10%;
+  text-align: center;
+  background: #1a1a1a;
+  color: white;
+}
+
+.section-transition p {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 10px auto;
+  line-height: 1.6;
+}
+
+
+/* GENERAL SECTION STYLING */
+.section-populism, .section-concern {
+  padding: 60px 10%;
+  text-align: center;
+  background: black;
+  color: white;
+}
+
+/* TITLE STYLING */
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+/* COLUMNS LAYOUT */
+.populism-container {
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+  gap: 30px;
+}
+
+.populism-column {
+  flex: 1;
+  max-width: 30%;
+  background: white;
+  color: black;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.2);
+  text-align: left;
+}
+
+/* HIGHLIGHTED TEXT */
+.highlight-text {
+  background-color: rgba(238, 194, 118, 0.68);
+  color: black;
+  font-weight: bold;
+  padding: 2px 4px;
+}
+
+/* CONCERN SECTION TEXT */
+.concern-container p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  text-align: left;
+  line-height: 1.6;
+}
+
+/* RESPONSIVENESS */
+@media (max-width: 1024px) {
+  .populism-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .populism-column {
+    max-width: 90%;
+  }
+}
+
+/* FINAL CTA SECTION */
+.section-cta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 80px 10%;
+  background: black;
+  color: white;
+}
+
+.cta-button {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 14px 28px;
+  border: 2px solid white;
+  background: transparent;
+  color: white;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.cta-button:hover {
+  background: white;
+  color: black;
+}
+
+
+/* SECTION: CRITICAL THINKING QUESTIONS */
+.section-questions {
+  padding: 60px 10%;
+  text-align: center;
+  background: black;
+  color: white;
+}
+
+.question-intro {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 10px auto 30px;
+  line-height: 1.6;
+}
+
+.questions-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* QUESTION BOX */
+.question-box {
+  background: white;
+  color: black;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.2);
+  width: 55%;
+  min-width: 380px;
+  text-align: left;
+  transition: transform 0.3s;
+}
+
+.question-box:hover {
+  transform: scale(1.03);
+}
+
+/* RESPONSE BUTTONS */
+.response-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.true-btn, .false-btn {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.true-btn {
+  background-color: green;
+  color: white;
+}
+
+.false-btn {
+  background-color: red;
+  color: white;
+}
+
+.true-btn:hover {
+  background-color: darkgreen;
+}
+
+.false-btn:hover {
+  background-color: darkred;
+}
+
+/* THINK CRITICALLY BUTTON */
+.toggle-btn {
+  background-color: rgb(45, 45, 45);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 8px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.toggle-btn:hover {
+  background-color: #3a3939;
+  color: white;
+}
+
+/* ANSWER CONTENT (Initially Hidden with Angular) */
+.answer-content {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #ccc;
+}
+
+.answer-content a {
+  color: blue;
+  text-decoration: none;
+}
+
+.answer-content a:hover {
+  text-decoration: underline;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 1024px) {
+  .questions-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .question-box {
+    width: 90%;
+  }
+}
+
+/* STACK QUESTIONS VERTICALLY */
+.questions-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/* FEEDBACK STYLES */
+.feedback {
+  margin-top: 10px;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.correct {
+  color: green;
+}
+
+.incorrect {
+  color: red;
+}
+
+
+
+/* SECTION: question media */
+.media-section {
+  margin-top: 1em;
+}
+
+.media-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 0.5em;
+}
+
+.media-grid a {
+  text-decoration: underline;
+  color: #66b;
+}
+
+.media-grid img,
+.media-grid video,
+.media-grid iframe {
+  max-width: 300px;
+  max-height: 200px;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.2);
+  object-fit: cover;
+}
+
+.media-grid iframe {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  max-width: 300px;
+}
+
+
+.response-buttons.multiple-choice {
+  display: flex;
+  flex-direction: column;  /* ← stacks buttons vertically */
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+  align-items: stretch;
+  text-align: left;
+}
+
+.response-buttons.multiple-choice button {
+  background-color: #f3f3f3;
+  color: #111;
+  border: none;
+  border-radius: 12px;
+  padding: 0.8rem 1.2rem;
+  font-family: 'Courier New', monospace;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  text-align: left;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.response-buttons.multiple-choice button:hover {
+  background-color: #e6e6e6;
+}
+
+.video-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.video-credit {
+  font-size: 0.75rem;
+  color: #ccc;
+  font-style: italic;
+  /*margin-top: 1rem;*/
+  max-width: 700px;
+}
+
+

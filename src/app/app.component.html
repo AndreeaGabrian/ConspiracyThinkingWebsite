@@ -5,7 +5,7 @@
           <h1 class="typing-text"></h1>
           <p class="fade-in-text above-scroll-text">Do you want to find the truth?</p>
         </div>
-        <button (click)="scrollToNext()" class="fade-in-button">Click to Scroll Down</button>
+        <button (click)="scrollToNext()" class="fade-in-button">Click to find out</button>
         <span class="fade-in-arrow">↓</span>
       </div>
     </div>
@@ -17,10 +17,25 @@
           Your browser does not support the video tag.
         </video>
 
-        <p class="video-credit">
-          🎬 Credit: This video was created by the website's authors using royalty-free images and video footage.
-          The script and narration are original.
-        </p>
+        <div class="video-credit">
+          <p>
+            🎬 Credit: This video was created by the website's authors using royalty-free images and video footage. The script and narration are original.
+          </p>
+
+          <button class="toggle-credits" (click)="showCredits = !showCredits">
+            {{ showCredits ? 'Hide Details ▲' : 'Show Detailed Credits ▼' }}
+          </button>
+
+          <div *ngIf="showCredits" class="credit-details">
+            <ul>
+              <li><strong>Trump’s photo:</strong> Daniel Torok – Official 2025 portrait on <a href="https://www.whitehouse.gov/administration/" target="_blank">whitehouse.gov</a>. Also posted at <a href="https://x.com/dto_rok/status/1879759515534729564" target="_blank">X (Twitter)</a></li>
+              <li><strong>Capitol image:</strong> Manuel Balce Ceneta / AP</li>
+              <li><strong>Twin Towers video:</strong> Jules Naudet footage via <a href="https://www.youtube.com/@Jozin" target="_blank">Jozin (YouTube channel)</a></li>
+              <li><strong>Music:</strong> "The Wild Side" by <a href="https://www.fiftysounds.com" target="_blank">fiftysounds.com</a></li>
+            </ul>
+          </div>
+        </div>
+
       </div>
 
     </section>
@@ -292,8 +307,8 @@
   <section class="section-questions" id="questions-section">
     <h2 class="section-title">QAnon: Think Critically</h2>
     <p class="question-intro">
-      Below are common QAnon claims. Read and watch the sources, analyze the evidence, and ask yourself:
-      <em>How do we determine what is true? What makes you believe a source?</em>
+      Below are common QAnon claims. Read and watch the sources, analyze the evidence, and ask yourself:<br>
+      <em><strong>How do we determine what is true? <br>What makes you believe a source?</strong></em>
     </p>
 
     <div class="questions-container">
@@ -321,7 +336,7 @@
 
       <!-- Question 2 -->
       <div class="question-box">
-        <h3>2. Has Q correctly predicted many world events?</h3>
+        <h3>2. QAnon has spread largely because of the accuracy of its predictions.</h3>
         <p><strong>Claim:</strong> Q's accurate predictions prove QAnon is real. Is it the case?</p>
         <div class="response-buttons">
           <button class="true-btn" (click)="checkAnswer('answer2', true)">True</button>
@@ -367,10 +382,10 @@
   </section>
 
   <section class="section-questions" id="questions-section2">
-    <h2 class="section-title">Populism and Conspiracy Thinking : Think critically</h2>
+    <h2 class="section-title">Populism and Conspiracy Thinking : Think Critically</h2>
     <p class="question-intro">
-      Below are common Populism and Conspiracy Thinking claims. Read and watch the sources, analyze the evidence, and ask yourself:
-      <em>How do we determine what is true? What makes you believe a source? How these events make you feel?</em>
+      Below are common Populism and Conspiracy Thinking claims. Read and watch the sources, analyze the evidence, and ask yourself:<br>
+      <em><strong>How do we determine what is true?</strong><br><strong>What makes you believe a source?<br></strong>  <strong>How these events make you feel?</strong></em>
 
     <div class="questions-container">
 
@@ -412,7 +427,7 @@
   <footer class="site-footer">
     <p>
       ⚠️ Most of the media used on this website — including videos, images, and social posts — were sourced from real public content found on social media platforms and royalty-free libraries like Pexels.
-      The only exception is the introductory video about QAnon, which was created by us.
+      The only exception is the introductory video about QAnon, which was created by us. Qanon Capital image credits: Matthew Gush
     </p>
     <p>
       Our choice to use real-world media was intentional: to realistically reflect the kind of information people encounter online every day.

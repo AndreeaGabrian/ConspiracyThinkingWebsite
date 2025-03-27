@@ -7,7 +7,7 @@ import {MediaSectionComponent} from './media-section/media-section.component';
   selector: 'app-root',
   imports: [RouterOutlet, CommonModule, MediaSectionComponent],
   templateUrl: './app.component.html',
-  styleUrl: './new.css'
+  styleUrls: ['./app.component.css','./new.css', './new2.css']
 })
 export class AppComponent {
   @ViewChild('videoRef1') videoElement!: ElementRef;
@@ -17,7 +17,7 @@ export class AppComponent {
   feedbackMessages: { [key: string]: string } = {};
   sourceButtonText: string = "Check the sources";
   showBibliography = false;
-
+  showCredits = false;
 
 
   correctAnswers: { [key: string]: boolean } = {
@@ -80,7 +80,7 @@ export class AppComponent {
       correctAnswer: 'A',
       explanation: 'This is a classic example of a false dilemma — framing a complex issue as a black-and-white choice.',
       contextMedia: [
-        {type: 'text', content: 'Housing in Netherlands is a complex issue and there were a lot of debated about it'},
+        {type: 'text', content: 'Housing in Netherlands is a complex issue and there were a lot of debates about it'},
         { type: 'image', src: "src/assets/images/qp1-1.png", alt: 'image' },
         { type: 'youtube', src: "https://youtube.com/embed/rRvMuev8lNM?si=KRPKSfwBpgnDP78u", label: 'Video' }
       ],
