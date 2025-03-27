@@ -1,11 +1,190 @@
-.hero{background-image:url("/src/assets/images/hero-img.jpg");background-size:cover;background-position:center;background-repeat:no-repeat;background-blend-mode:overlay;width:100%;height:120vh;position:relative;display:flex;align-items:center;justify-content:center}.v1{position:relative;width:90%;height:auto;max-width:1000px;border:8px solid #2d2d2d;border-radius:15px;box-shadow:0px 0px 20px rgba(255,255,255,0.5);display:block;margin:50px auto}.overlay{position:absolute;display:inline-grid;bottom:30%;left:50%;transform:translateX(-50%)}
-button{font-family:'Courier New',monospace;padding:12px 24px;font-size:18px;font-weight:bold;border:none;background:whitesmoke;color:black;border-radius:50px;cursor:pointer;transition:all 0.3s ease-in-out;box-shadow:0px 0px 10px rgba(253,246,210,0.8);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px}
-button:hover{background:#d9ecf8;color:black;transform:scale(1.1);box-shadow:0px 0px 15px rgb(217,236,248)}.fia{display:flex;flex-direction:column;align-items:center;justify-content:center;color:whitesmoke;font-size:65px;opacity:0;animation:fadeIn 2s ease-in-out 4s forwards,bounce 1.5s infinite}
-@keyframes bounce{0%,100%{transform:translateY(0)} 50%{transform:translateY(5px)}} #next-section{display:flex;align-items:center;justify-content:center;height:100vh;background:#111}
-.main-container{background-color:black}.typing-text::after{content:"Are conspiracy theories real?";color:white;display:inline-block;overflow:hidden;white-space:nowrap;animation:typing 3s steps(25,end),blink 0.8s infinite;border-right:3px solid white}
-@keyframes typing{from{width:0} to{width:100%}} @keyframes blink{50%{border-color:transparent}}.above-scroll-text{display:flex;justify-content:center}.fade-in-text{color:white}.fade-in-text,.fade-in-button{opacity:0;animation:fadeIn 2s ease-in-out 4s forwards}
-@keyframes fadeIn{from{opacity:0} to{opacity:1}}.s-i{display:flex;justify-content:center;align-items:center;text-align:center;height:80vh;color:white}.s-i.content-wrapper{max-width:800px;padding:20px;background-image:url("/src/assets/images/what.jpg");background-size:cover;background-position:center;background-repeat:no-repeat;background-blend-mode:overlay;border-radius:10px}.sqe{background:black;padding:60px 10%;text-align:center}.exp-c{display:flex;justify-content:space-between;text-align:left;gap:30px}
-.expansion-column{flex:1;max-width:30%;background:white;color:black;padding:20px;border-radius:15px;box-shadow:0px 4px 15px rgba(255,255,255,0.2);text-align:left}.htit{font-size:1.5rem;font-weight:bold;color:black;margin-bottom:10px;text-align:center}
-@media(max-width:1024px){.exp-c{flex-direction:column;align-items:center}.expansion-column{max-width:90%}}.s-tim{display:flex;align-items:center;justify-content:space-between;padding:100px 10%;background:#f4f4f4;color:black}.text-content{width:50%}.image-content{width:50%;display:flex;justify-content:center}.image-content img{max-width:100%;border-radius:10px;box-shadow:0px 0px 15px rgba(0,0,0,0.3)}.stbox{background-image:url("/src/assets/images/hands_window.jpg");background-blend-mode:overlay;padding:80px 10%;text-align:center;border-radius:10px}
-.s-tit{text-align:center;font-size:2.5rem;margin-bottom:40px;color:white}.b-c{display:flex;flex-wrap:wrap;justify-content:center;gap:20px;padding:40px 10%}.b-r{display:flex;flex-wrap:wrap;justify-content:center;gap:1.5rem;margin:2rem auto;max-width:1200px}.info-box{flex:1 1 300px;background:white;border-radius:16px;padding:1.5rem;box-shadow:0 4px 16px rgba(0,0,0,0.15);text-align:center;max-width:360px}.if-m{width:100%;max-height:160px;object-fit:cover;border-radius:12px;margin-bottom:1rem}
-.htit{font-size:1.5rem;font-weight:bold;color:black;margin-bottom:10px}
+
+.hero {
+  background-image: url("/src/assets/images/hero-img.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
+  width: 100%;
+  height: 120vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.video1 {
+  position: relative;
+  width: 90%;
+  height: auto;
+  max-width: 1000px;
+  border: 8px solid #2d2d2d;
+  border-radius: 15px;
+  box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.5);
+  display: block;
+  margin: 50px auto;
+}
+
+.overlay {
+  position: absolute;
+  display: inline-grid;
+  bottom: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+button {
+  font-family: 'Courier New', monospace;
+  padding: 12px 24px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  background: whitesmoke;
+  color: black;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 0px 10px rgba(253, 246, 210, 0.8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+button:hover {
+  background: #d9ecf8;
+  color: black;
+  transform: scale(1.1);
+  box-shadow: 0px 0px 15px rgb(217, 236, 248);
+}
+
+.fade-in-arrow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: whitesmoke;
+  font-size: 65px;
+  opacity: 0;
+  animation: fadeIn 2s ease-in-out 4s forwards, bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+}
+
+#next-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 120vh;
+  background: #111;
+}
+
+#next-section2 {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f4f4f4;
+}
+
+.main-container{
+  background-color: black;
+}
+
+.typing-text::after {
+  content: "Are conspiracy theories real?";
+  color:white;
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3s steps(25, end), blink 0.8s infinite;
+  border-right: 3px solid white; /* Blinking cursor effect */
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+.above-scroll-text{
+  display: flex;
+  justify-content: center;
+}
+
+.fade-in-text{
+  color: white;
+}
+/* Fade-in effect for the subtitle */
+.fade-in-text, .fade-in-button{
+  opacity: 0;
+  animation: fadeIn 2s ease-in-out 4s forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* SECTION INTRO */
+.section-intro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 50vh;
+  color: white;
+}
+
+.section-intro .content-wrapper {
+  max-width: 800px;
+  padding: 20px;
+  background-image: url("/src/assets/images/what.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
+  border-radius: 10px;
+}
+
+/* QANON EXPANSION SECTION */
+.section-qanon-expansion {
+  /*background: black;*/
+  background-image: url("/src/assets/images/Qanon-Capital.jpg");
+  background-size: contain;
+  background-position: center top; /* aligns it to the top */
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
+  padding: 60px 10%;
+  text-align: center;
+}
+
+/* COLUMNS LAYOUT */
+.expansion-container {
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+  gap: 30px;
+}
+
